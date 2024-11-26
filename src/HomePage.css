@@ -1,0 +1,28 @@
+.arrow-container {
+    position: relative;
+    overflow: hidden;
+    height: 30px; /* Adjust height to accommodate the arrow */
+    margin: 20px 0; /* Spacing around the arrow */
+  }
+  
+  .moving-arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid darkgreen; /* Arrow color */
+    position: absolute;
+    bottom: 0; /* Aligns the arrow to the bottom of the container */
+    transition: transform 0.1s; /* Smooth transition for movement */
+  }
+  
+  .dot {
+    width: 5px;
+    height: 5px;
+    background-color: darkgreen; /* Dot color */
+    border-radius: 50%;
+    position: absolute;
+    transition: opacity 0.5s; /* Smooth fade out */
+    opacity: 1;
+  }
+  

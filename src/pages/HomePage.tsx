@@ -1,0 +1,94 @@
+import { Box, Button, Typography } from '@mui/material'
+import React from 'react'
+import { Link } from 'react-router-dom'
+// import './HomePage.css'; // Ensure to create this CSS file
+
+const HomePage: React.FC = () => {
+  const scrollToButtons = () => {
+    const buttonsSection = document.getElementById('buttons-section')
+    if (buttonsSection) {
+      buttonsSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+  return (
+    <div>
+      {/* Header with title and buttons */}
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        sx={{
+          backgroundColor: 'darkgreen',
+          color: 'white',
+          padding: '10px 20px',
+        }}
+      >
+        <Typography variant="h5">Reports Page</Typography>
+        <Box>
+          <Button
+            variant="contained"
+            href="/home"
+            sx={{
+              marginRight: 1,
+              backgroundColor: 'rgba(255, 255, 255, 0.5)',
+              color: 'darkgreen',
+              borderRadius: '12px',
+              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+              '&:hover': {
+                backgroundColor: 'rgba(255, 255, 255, 0.7)',
+                color: 'white', // Change text color to white on hover
+              },
+            }}
+          >
+            Home
+          </Button>
+          <Button
+            variant="contained"
+            href="/transactions"
+            sx={{
+              marginRight: 1,
+              backgroundColor: 'rgba(255, 255, 255, 0.5)', // Semi-transparent white
+              color: 'darkgreen', // Text color
+              borderRadius: '12px', // Rounded corners
+              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)', // Subtle shadow
+              '&:hover': {
+                backgroundColor: 'rgba(255, 255, 255, 0.7)', // Slightly more opaque on hover
+                color: 'white', // Change text color to white on hover
+              },
+            }}
+          >
+            Transactions
+          </Button>
+          <Button
+            variant="contained"
+            href="/budgets"
+            sx={{
+              backgroundColor: 'rgba(255, 255, 255, 0.5)',
+              color: 'darkgreen',
+              borderRadius: '12px',
+              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+              '&:hover': {
+                backgroundColor: 'rgba(255, 255, 255, 0.7)',
+                color: 'white', // Change text color to white on hover
+              },
+            }}
+          >
+            Budgets
+          </Button>
+        </Box>
+      </Box>
+      <div>
+        <div>
+          {' '}
+          Welcome to your personal finance tracker! This application allows you
+          to easily manage your transactions and monitor your budget. Visit the
+          Transactions page to add and review your expenses, and explore the
+          Reports page for insightful charts and summaries of your financial
+          activities. Start taking control of your finances today!
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default HomePage
